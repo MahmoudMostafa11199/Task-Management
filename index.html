@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta Info -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Management</title>
+    <meta name="description" content="" />
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- JavaScript Files -->
+    <script src="./js/notification.js" defer></script>
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="heading__primary">Task Management</h1>
+
+      <div class="card">
+        <div class="tasks card__item">
+          <h3 class="heading__tertiary">
+            <span class="title">📋 Tasks Board</span>
+            <span class="count count--task">0</span>
+          </h3>
+
+          <div class="task-container">
+            <form class="form__add-task">
+              <input
+                type="text"
+                name="task"
+                placeholder="Add a task..."
+                class="form__input task-input"
+              />
+              <button class="btn btn--add-task">Add</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="members__cards-container"></div>
+      </div>
+    </div>
+
+    <!-- Modal Add Users -->
+    <div class="modal">
+      <h2 class="heading__secondary">
+        <span class="user-icon">👥</span> Set Up Your Team
+      </h2>
+      <form class="form-team">
+        <label for="team-member">
+          Enter team member names separated by commas:
+        </label>
+        <input
+          type="text"
+          id="team-member"
+          class="form__input"
+          placeholder="e.g. John, Mike, Emma"
+        />
+        <button class="btn btn--add-team">Create Board</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <!-- Notification -->
+    <p class="notification notification-hidden"></p>
+  </body>
+</html>
