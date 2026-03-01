@@ -2,7 +2,9 @@
 
 A dynamic, interactive Team Task Board built with Vanilla JavaScript. This application allows users to set up a team, create tasks, and manage them through a drag-and-drop interface with real-time persistence.
 
-[**Live Demo**](https://task-management-mahmoud.vercel.app/)
+## Live Demo
+
+Check out the live version here: [Task Management](https://task-management-mahmoud.vercel.app/)
 
 ## Features
 
