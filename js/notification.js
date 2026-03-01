@@ -1,15 +1,15 @@
 // Elements
 const notification = document.querySelector('.notification');
-const closeNotificationBtn = document.querySelector('.close-notification');
 
 // State
 let notificationTimer;
 
-//
+// Show Notification
 const showNotification = (status, message) => {
   clearTimeout(notificationTimer);
+  notification.classList.remove('error', 'success', 'notification-hidden');
 
-  let markup;
+  let markup = '';
   switch (status) {
     case 'error':
       markup = `
@@ -29,30 +29,29 @@ const showNotification = (status, message) => {
   }
 
   notification.innerHTML = markup;
-  notification.classList.remove('notification-hidden');
 
   startTimeout();
 };
 
+// Close Notification
 const closeNotification = () => {
   notification.classList.add('notification-hidden');
-
   clearTimeout(notificationTimer);
 };
 
+// Start Timer (3000 Second)
 const startTimeout = () => {
   clearTimeout(notificationTimer);
-
-  notificationTimer = setTimeout(() => {
-    notification.classList.add('notification-hidden');
-  }, 3000);
+  notificationTimer = setTimeout(closeNotification, 3000);
 };
 
-//
-
+// Event Listener
 notification.addEventListener('mouseover', (e) => {
   clearTimeout(notificationTimer);
 });
+//
 notification.addEventListener('mouseleave', startTimeout);
-
-closeNotificationBtn?.addEventListener('click', closeNotification);
+//
+notification.addEventListener('click', (e) => {
+  if (e.target.classList.contains('close-notification')) closeNotification();
+});
