@@ -335,6 +335,9 @@ label {
 .notification.success {
   border: 2px solid #27ff17;
 }
+.notification.warning {
+  border: 2px solid #ffb700;
+}
 .notification.error {
   border: 2px solid #ff2717;
 }

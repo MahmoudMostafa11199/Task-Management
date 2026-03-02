@@ -157,7 +157,7 @@ document.addEventListener('dragstart', (e) => {
   if (taskEl) {
     if (taskEl.classList.contains('Finished')) {
       e.preventDefault();
-      showNotification('error', 'Finished tasks cannot be moved!');
+      showNotification('warning', 'Finished tasks cannot be moved!');
     } else {
       e.dataTransfer.setData('taskId', taskEl.dataset.id);
       taskEl.style.opacity = '0.5';

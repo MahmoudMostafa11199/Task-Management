@@ -19,6 +19,14 @@ const showNotification = (status, message) => {
       notification.classList.add('error');
       break;
 
+    case 'warning':
+      markup = `
+        <span>⚠️</span>
+        ${message}
+        `;
+      notification.classList.add('warning');
+      break;
+
     case 'success':
       markup = `
         <span>✅</span>
