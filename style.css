@@ -133,7 +133,7 @@ label {
 }
 
 .card__item {
-  min-width: 250px;
+  max-width: 300px;
   min-height: 300px;
   overflow-y: hidden;
   background-color: #fff;
@@ -195,6 +195,7 @@ label {
 
 .task__text {
   -webkit-box-flex: 1;
+  padding-right: 4px;
 }
 
 .task__status {
